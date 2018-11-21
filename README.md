@@ -14,6 +14,7 @@ Cli tool to generate RingCentral chatbot code.
 ## Use
 ```bash
 # make sure you have npm@5.2+ installed
+# use nvm to install nodejs/npm is recommended
 npx ringcentral-chatbot-factory my-app
 # or install it first
 # npm i -g ringcentral-chatbot-factory && rcf my-app
