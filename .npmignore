@@ -5,3 +5,5 @@
 /gh/
 /test/
 /screenshots/
+.eslintrc
+.travis.yml

@@ -1,11 +1,11 @@
-const reef = require('../lib')
+const rcf = require('../lib')
 const assert = require('assert')
-const fs = require('fs')
 const {rm} = require('shelljs')
 const {resolve} = require('path')
 const prompts = require('prompts')
+const pack = require('../package.json')
 const testConfig = {
-  name: 'my app',
+  name: 'my-app',
   npmName: 'my-app',
   description: 'ma-app',
   version: '0.0.1',
@@ -13,66 +13,31 @@ const testConfig = {
   confirm: true
 }
 
-let tests = [
-  {
-    path: 'README.md',
-    strings: [
-      'name',
-      'description'
-    ]
-  },
-  {
-    path: 'dist/manifest.json',
-    strings: [
-      'name',
-      'description',
-      'version',
-      'siteMatch'
-    ]
-  },
-  {
-    path: 'package.json',
-    strings: [
-      'npmName',
-      'description',
-      'version'
-    ]
-  },
-  {
-    path: 'src/chrome-extension/third-party-api.js',
-    strings: [
-      'name'
-    ]
-  }
-]
-
-describe('version fixer', function() {
+describe(pack.name, function() {
   this.timeout(100000)
   it('default', function(done) {
     prompts.inject(testConfig)
     let p = resolve(__dirname, './my-app')
-    reef({
+    rcf({
       path: p
     })
-    setTimeout(async function() {
-      for (let t of tests) {
-        let {path, strings} = t
-        let fileStr = fs
-          .readFileSync(
-            p + '/' + path
-          ).toString()
-        for (let s of strings) {
-          let v = testConfig[s]
-          assert(
-            fileStr.includes(v),
-            true
-          )
-        }
-      }
+    setTimeout(() => {
+      let pkg = resolve(p, 'package.json')
+      let pkgObj = require(pkg)
+      assert(pkgObj.version === testConfig.version)
+      assert(pkgObj.name === testConfig.name)
+      assert(pkgObj.description === testConfig.description)
+      let em = resolve(p, 'README.md')
+      let str = require('fs').readFileSync(em).toString()
+      assert(
+        str.includes(`# ${testConfig.name}`)
+      )
+      assert(
+        str.includes(`${testConfig.description}`)
+      )
       rm('-rf', p)
       done()
-    }, 1000)
+    }, 5500)
   })
-
 
 })
