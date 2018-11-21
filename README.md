@@ -5,6 +5,8 @@
 
 Cli tool to generate RingCentral chatbot code.
 
+![screenshot](screenshots/screenshot.png)
+
 ## Templates
 - https://github.com/zxdong262/ringcentral-chatbot-python
 - https://github.com/tylerlong/ringcentral-chatbot-js
