@@ -4,7 +4,7 @@
   "description": "Cli tool to generate RingCentral chatbot code.",
   "main": "bin/rcf.js",
   "bin": {
-    "reef": "bin/rcf.js",
+    "rcf": "bin/rcf.js",
     "ringcentral-chatbot-factory": "bin/rcf.js"
   },
   "directories": {

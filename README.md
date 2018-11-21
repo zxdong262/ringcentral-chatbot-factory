@@ -1,8 +1,9 @@
+
 # ringcentral-chatbot-factory
 
-## deving...
+Cli tool to generate RingCentral chatbot code.
 
-[![Build Status](https://travis-ci.org/zxdong262/ringcentral-chatbot-factory.svg?branch=master)](https://travis-ci.org/zxdong262/ringcentral-chatbot-factory)
+[![Build Status](https://travis-ci.org/zxdong262/ringcentral-chatbot-factory.svg?branch=test)](https://travis-ci.org/zxdong262/ringcentral-chatbot-factory)
 
 Cli tool to generate RingCentral chatbot code.
 
@@ -14,6 +15,8 @@ npx ringcentral-chatbot-factory my-app
 # npm i -g ringcentral-chatbot-factory && rcf my-app
 # then carefully answer all questions, then the my-app folder will be create
 cd my-app
+
+# follow the instruction of my-app/README.md to dev/run/test the bot
 ```
 
 ## License
