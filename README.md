@@ -5,6 +5,10 @@
 
 Cli tool to generate RingCentral chatbot code.
 
+## Templates
+- https://github.com/zxdong262/ringcentral-chatbot-python
+- https://github.com/tylerlong/ringcentral-chatbot-js
+
 ## Use
 ```bash
 # make sure you have npm@5.2+ installed
