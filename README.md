@@ -1,8 +1,6 @@
 
 # ringcentral-chatbot-factory
 
-Cli tool to generate RingCentral chatbot code.
-
 [![Build Status](https://travis-ci.org/zxdong262/ringcentral-chatbot-factory.svg?branch=test)](https://travis-ci.org/zxdong262/ringcentral-chatbot-factory)
 
 Cli tool to generate RingCentral chatbot code.
