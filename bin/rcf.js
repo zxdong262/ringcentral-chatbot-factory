@@ -10,13 +10,14 @@ program
   .usage('[appName]')
   .parse(process.argv)
 
-let path = program.args.shift()
-if (!path) {
+let name = program.args.shift()
+if (!name) {
   return program.outputHelp()
 }
 
-path = resolve(path)
+let path = resolve(name)
 
 reef({
+  name,
   path
 })
