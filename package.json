@@ -1,6 +1,6 @@
 {
   "name": "ringcentral-chatbot-factory",
-  "version": "0.0.8",
+  "version": "0.1.0",
   "description": "Cli tool to generate RingCentral chatbot code.",
   "main": "bin/rcf.js",
   "bin": {
