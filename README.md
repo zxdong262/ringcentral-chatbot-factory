@@ -3,6 +3,8 @@
 
 [![Build Status](https://travis-ci.org/zxdong262/ringcentral-chatbot-factory.svg?branch=test)](https://travis-ci.org/zxdong262/ringcentral-chatbot-factory)
 
+![screenshot](screenshots/fast.jpg)
+
 Cli tool to generate RingCentral chatbot code.
 
 ![screenshot](screenshots/screenshot.png)
