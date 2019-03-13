@@ -28,6 +28,16 @@ cd my-app
 # follow the instruction of my-app/README.md to dev/run/test the bot
 ```
 
+## Init bot project in one line script
+
+```bash
+# use wget
+wget -qO- https://raw.githubusercontent.com/zxdong262/ringcentral-chatbot-factory/master/bin/init.sh |
+
+# use curl
+curl -o- https://raw.githubusercontent.com/zxdong262/ringcentral-chatbot-factory/master/bin/init.sh | bash
+```
+
 ## License
 
 MIT
