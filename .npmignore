@@ -8,4 +8,5 @@
 .eslintrc
 .travis.yml
 /bin/test
+/bin/init.sh
 /screenshots
