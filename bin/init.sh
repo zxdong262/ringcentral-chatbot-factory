@@ -9,7 +9,7 @@ NEW_UUID=$(LC_CTYPE=C tr -dc 0-9 < /dev/urandom | head -c 4 | xargs | cat)
 echo 'init bot project'
 FOLDER="ringcentral-chatbot$NEW_UUID"
 cmd="npx ringcentral-chatbot-factory $FOLDER -A"
-echo cmd
+echo "$cmd"
 npx ringcentral-chatbot-factory $FOLDER -A
 
 echo 'init project'
