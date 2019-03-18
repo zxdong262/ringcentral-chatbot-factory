@@ -4,15 +4,15 @@
 # curl -o- https://raw.githubusercontent.com/zxdong262/ringcentral-chatbot-factory/master/bin/init.sh | bash
 { # this ensures the entire script is downloaded #
 
-echo 'requires nodejs8+ and npm 5.2+'
+echo -e "\033[34m=> requires nodejs8+ and npm 5.2+\033[0m"
 NEW_UUID=$(LC_CTYPE=C tr -dc 0-9 < /dev/urandom | head -c 4 | xargs | cat)
-echo 'init bot project'
+echo '=> init bot project'
 FOLDER="ringcentral-chatbot$NEW_UUID"
 cmd="npx ringcentral-chatbot-factory $FOLDER -A"
-echo "$cmd"
+echo "=> $cmd"
 npx ringcentral-chatbot-factory $FOLDER -A
 
-echo 'init project'
+echo -e '\033[34m=> init project\033[0m'
 cd $FOLDER
 
 npm i
@@ -25,15 +25,15 @@ echo ""
 echo ""
 echo "=============="
 echo ""
-echo "All project files are ready, run 'cd $FOLDER' first"
+echo -e "=> All project files are ready, run \033[34m'cd $FOLDER'\033[0m first"
 echo ""
 echo "=============="
 
 echo ""
 echo ""
-
+echo -e "\033[34m=> 3 more steps to run the bot.\033[0m"
+echo ""
 cat << EOF
-3 more steps to run the bot.
 
 1. Run ngrok proxy by "npm run proxy", and put the server link: https://xxxx.ngrok.com in .env set
 
@@ -48,7 +48,7 @@ RINGCENTRAL_CHATBOT_CLIENT_SECRET=app Client Secret
 
 Then, goto app bot page, click the add bot button to add the bot, and togo https://glip-app.devtest.ringcentral.com/ to talk to the bot.
 
-That's it, have fun!
+=> That's it, have fun!
 EOF
 echo ""
 echo ""
